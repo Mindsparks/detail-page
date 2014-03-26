@@ -1,0 +1,30 @@
+.clearfix:after, .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #444444;
+}
+
+* {
+  -webkit-transition: 0.25s all;
+  -moz-transition: 0.25s all;
+  -ms-transition: 0.25s all;
+  -o-transition: 0.25s all;
+  transition: 0.25s all;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 10px;
+  background: url(../img/1.png);
+  background-size: cover;
+}

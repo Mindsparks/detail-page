@@ -1,0 +1,24 @@
+// Define mixins here.
+@mixin transition ( $arguments: .25s all ) {
+	-webkit-transition: $arguments;
+	-moz-transition: $arguments;
+	-ms-transition: $arguments;
+	-o-transition: $arguments;
+	transition: $arguments;
+}
+
+.clearfix {
+	&:after {
+	content:"";
+	display:table;
+	clear:both;
+	}
+}
+
+@mixin box-sizing ( $box-model: border-box ) {
+	-webkit-box-sizing: $box-model;
+	-moz-box-sizing: $box-model;
+	-ms-box-sizing: $box-model;
+	-o-box-sizing: $box-model;
+	box-sizing: $box-model;
+}

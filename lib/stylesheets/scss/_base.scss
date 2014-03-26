@@ -1,0 +1,18 @@
+// Base styles that are modified on a page by page basis.
+body {
+	margin:0px;
+	padding:0px;
+	background:$gray;
+}
+
+* {
+	@include transition;
+	@include box-sizing;
+}
+
+.container {
+		padding:10px;
+		@extend .clearfix;
+		background:url(../img/1.png);
+		background-size:cover;
+}
