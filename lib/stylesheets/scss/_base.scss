@@ -1,18 +1,37 @@
 // Base styles that are modified on a page by page basis.
 body {
-	margin:0px;
-	padding:0px;
+	margin:0px; // Removes any extra margin added by the browser.
+	padding:0px; // Removes any extra padding added by the browser.
 	background:$gray;
 }
 
 * {
-	@include transition;
+	@include transition; // Includes any transitions all pages.
 	@include box-sizing;
 }
 
 .container {
-		padding:10px;
+		padding:80px;
 		@extend .clearfix;
-		background:url(../img/1.png);
-		background-size:cover;
+		background:url(../img/dj1.jpg); // Image is grabbed by going up a folder first.
+		background-size:cover; // Image is stretched to fit the width of the browser.
+
+		h1 {
+			color:$white;
+			font-size:40px;
+			font-family:$sans-serif;
+			text-shadow:$small;
+		}
+}
+
+header {
+	h1 {
+		margin:auto;
+		font-size:30px;
+		text-align:center;
+		font-family:$sans-serif;
+		text-shadow:$small;
+		color:$white;
+		padding:30px;
+	}
 }
