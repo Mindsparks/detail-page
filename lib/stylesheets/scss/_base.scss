@@ -11,17 +11,64 @@ body {
 }
 
 .container {
-		padding:80px;
-		@extend .clearfix;
-		background:url(../img/dj1.jpg); // Image is grabbed by going up a folder first.
-		background-size:cover; // Image is stretched to fit the width of the browser.
+	padding:80px;
+	@extend .clearfix;
+
+	&:nth-of-type(1) {
+	background:url(../img/dj1.jpg); // Image is grabbed by going up a folder first.
+	background-size:cover; // Image is stretched to fit the width of the browser.
 
 		h1 {
 			color:$white;
 			font-size:40px;
 			font-family:$sans-serif;
 			text-shadow:$small;
+			padding:0px;
+			margin:0px 0px 10px 0px;
 		}
+
+		h2 {
+			color:$white;
+			font-size:24px;
+			font-family:$sans-serif;
+			text-shadow:$small;
+			padding:0px;
+			margin:0px;
+		}
+	}
+}
+
+.albums {
+
+	h3 {
+		color:$white;
+		font-size:14px;
+		font-family:$sans-serif;
+		text-shadow:$small;
+		padding:10px;
+		margin:0px;
+		text-align:center;
+	}
+
+	section {
+		background-color:#333333;
+		background-size:cover;
+	}
+
+	img {
+		width:100%;
+		display:block;
+	}
+}
+
+.one-third {
+	width:30.666%;
+	float:left;
+	margin-right:4%;
+
+	&:nth-of-type(3) {
+		margin-right:0;
+	}
 }
 
 header {
