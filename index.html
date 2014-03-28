@@ -4,6 +4,10 @@
 		<title>Digital Electronic Music Store</title>
 		<link rel="stylesheet" href="lib/stylesheets/styles.css">
 		<meta charset="utf-8">
+	  	<script src="lib/scripts/angular.min.js"></script>
+	 	<script src="lib/scripts/app.js"></script>
+	 	<script src="lib/scripts/services.js"></script>
+	 	<script src="lib/scripts/controllers.js"></script>
 	</head>
 	<body>
 		<header>
@@ -16,48 +20,20 @@
 			</article>
 		</div>
 		<div class="container albums">
-			<section class="one-third"> <!-- ng-repeat="songs in songsList" -->
-				<!-- <h3>{{song.artist}} - {{song.title}}</h3> -->
-				<h3>Metrik - Drift</h3>
-				<div>
-					<img src='lib/img/albums/1.jpg'>
-				</div>
-			</section>
-			<section class="one-third">
-				<!-- <h3>{{artist}} - {{song}}</h3> -->
-				<h3>Datsik - Juicebox</h3>
-				<div>
-					<img src='lib/img/albums/2.jpg'>
-				</div>
-			</section>
-			<section class="one-third">
-				<!-- <h3>{{artist}} - {{song}}</h3> -->
-				<h3>Mord Fustang - Champloo</h3>
-				<div>
-					<img src='lib/img/albums/3.jpg'>
-				</div>
-			</section>
-				<section class="one-third"> <!-- ng-repeat="songs in songsList" -->
-				<!-- <h3>{{song.artist}} - {{song.title}}</h3> -->
-				<h3>Hydra - Affinity</h3>
-				<div>
-					<img src='lib/img/albums/4.jpg'>
-				</div>
-			</section>
-			<section class="one-third">
-				<!-- <h3>{{artist}} - {{song}}</h3> -->
-				<h3>Datsik - Vindicate</h3>
-				<div>
-					<img src='lib/img/albums/5.jpg'>
-				</div>
-			</section>
-			<section class="one-third">
-				<!-- <h3>{{artist}} - {{song}}</h3> -->
-				<h3>Buzzwak - Mumbling Music [Access Denied Remix]</h3>
-				<div>
-					<img src='lib/img/albums/6.jpg'>
+			<section class="one-third" ng-repeat="song in songs">
+				<h3>{{song.artist}} - {{song.title}}</h3>
+				<div ng-click="toggleSong(song);" ng-class="{active: song.selected}">
+					<img ng-src='lib/img/albums/{{song.id}}.jpg'>
 				</div>
 			</section>
 		</div>
+		<footer>
+			<div class="footer-links-float-left">
+				<a href="about.html">About DJ Expo</a>
+				<a href="about.html">Contact Us</a>
+				<a href="about.html">FAQs</a>
+			</div>
+			<p>&copy; 2013-2014 DJ Expo</p>
+		</footer>
 	</body>
 </html>
