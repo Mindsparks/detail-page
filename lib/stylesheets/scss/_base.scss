@@ -42,7 +42,7 @@ body {
 
 	h3 {
 		color:$white;
-		font-size:14px;
+		font-size:12px;
 		font-family:$sans-serif;
 		text-shadow:$small;
 		padding:10px;
@@ -51,7 +51,8 @@ body {
 	}
 
 	section {
-		background-color:#333333;
+		margin-bottom:40px;
+		background-color:#222222;
 		background-size:cover;
 	}
 
@@ -80,5 +81,6 @@ header {
 		text-shadow:$small;
 		color:$white;
 		padding:30px;
+		background-color:#222222;
 	}
 }
