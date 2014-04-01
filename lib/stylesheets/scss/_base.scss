@@ -63,6 +63,7 @@ body {
 		display:block;
 		opacity:0.6;
 		z-index:1;
+		cursor: pointer;
 
 		&.active {
 			opacity:1;
@@ -102,17 +103,22 @@ body {
 					font-size:12px;
 					font-family:$sans-serif;
 					text-shadow:$small;
-					padding:5px 0px 5px 0px;
-					text-align:center;
+					padding:5px 0px 5px 10px;
+					text-align:left;
 					z-index:1;
 					list-style-type:none;
 
+					.grey-text {
+						color:#BBBBBB;
+						display: inline;
+					}
+
 					&:nth-of-type(1){
-						padding:10px 0px 5px 0px;
+						padding:10px 0px 5px 10px;
 					}
 
 					&:last-of-type{
-						padding:5px 0px 10px 0px;
+						padding:5px 0px 10px 10px;
 					}
 				}
 			}
