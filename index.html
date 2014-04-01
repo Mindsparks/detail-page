@@ -22,8 +22,17 @@
 		<div class="container albums">
 			<section class="one-third" ng-repeat="song in songs">
 				<h3>{{song.artist}} - {{song.title}}</h3>
-				<div ng-click="toggleSong(song);" ng-class="{active: song.selected}">
-					<img ng-src='lib/img/albums/{{song.id}}.jpg'>
+				<div class="hover-class-position">
+					<img ng-src='lib/img/albums/{{song.id}}.jpg' ng-click="toggleAlbumState(song);" ng-class="{active: song.selected}"> <!-- When song is selected, add the 'active' class to this element. -->
+					<div class="hover-album" ng-class="{active: song.selected}">
+						<ul>
+							<li>{{song.title}}</li>
+							<li>{{song.artist}}</li>
+							<li>{{song.album}}</li>
+							<li>{{song.id}}</li>
+							<li>{{song.label}}</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 		</div>
