@@ -10,6 +10,32 @@ body {
 	@include box-sizing;
 }
 
+.page-numbers {
+	float:right;
+
+	a:link {
+			color:$white;
+			font-family:$sans-serif;
+			font-size:10pt;
+			padding:20px;
+			text-decoration:none;
+	}
+	a:visited {
+			color:#DDDDDD;
+			font-family:$sans-serif;
+			font-size:10pt;
+			padding:20px;
+			text-decoration:none;
+	}
+	a:hover {
+			color:$white;
+			font-family:$sans-serif;
+			font-size:10pt;
+			padding:20px;
+			text-decoration:underline;
+	}
+}
+
 .container {
 	padding:80px;
 	@extend .clearfix;
