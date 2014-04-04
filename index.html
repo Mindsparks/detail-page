@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html ng-app="myAngularApp" ng-controller="appInfoController">
 	<head>
-		<title>Digital Electronic Music Store</title>
+		<title>Mental Achievements</title>
 		<link rel="stylesheet" href="lib/stylesheets/styles.css">
 		<meta charset="utf-8">
 	  	<script src="lib/scripts/angular.min.js"></script>
@@ -11,34 +11,33 @@
 	</head>
 	<body>
 		<header>
-			<h1>DJ Expo</h1>
+			<h1>Mindabyss</h1>
 		</header>
 		<div class="container">
 			<article>
-				<h1>Electronic Extravaganza</h1>
-				<h2>Get your beats, kicks and synths.</h2>
+				<h1>Mental Achievements</h1>
+				<h2>Realizations, experiments, new knowledge.</h2>
 			</article>
 		</div>
 		<div class="container albums">
 			<section class="one-third" ng-repeat="song in songs">
-				<h3>{{song.artist}} - {{song.title}}</h3>
+				<h3>{{song.title}}</h3>
 				<div class="hover-class-position">
 					<img ng-src='lib/img/albums/{{song.id}}.jpg' ng-click="toggleAlbumState(song);" ng-class="{active: song.selected}"> <!-- When song is selected, add the 'active' class to this element. -->
 					<div class="hover-album" ng-class="{active: song.selected}">
 						<ul>
-							<li><div class="grey-text">Title: </div>{{song.title}}</li>
-							<li><div class="grey-text">Artist: </div>{{song.artist}}</li>
-							<li><div class="grey-text">Album: </div>{{song.album}}</li>
-							<li><div class="grey-text">Track #: </div>{{song.id}}</li>
-							<li><div class="grey-text">Label: </div>{{song.label}}</li>
+							<li><div class="grey-text">Source: </div>{{song.source}}</li>
+							<li><div class="grey-text">Date: </div>{{song.date}}</li>
+							<li><div class="grey-text">Description: </div>{{song.description}}</li>
+							<li><div class="grey-text">Tags: </div>{{song.tags}}</li>
 						</ul>
 					</div>
 				</div>
 			</section>
 		</div>
-		<div class="page-numbers" ng-repeat="pages in songs">
-			<a href="{{pages.number}}">
-		</div>
+		<!-- <div class="page-numbers" ng-repeat="pages in songs">
+			<a href="{{pages.number}}"></a>
+		</div> -->
 		<footer>
 			<div class="footer-links-float-left">
 				<a href="about.html">About DJ Expo</a>
